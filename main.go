@@ -23,12 +23,11 @@ func snippetCreate(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", home)
-	mux.HandleFunc("/snippet/view", snippetView)
-	mux.HandleFunc("/snippet/create", snippetCreate)
+	http.HandleFunc("/", home)
+	http.HandleFunc("/snippet/view", snippetView)
+	http.HandleFunc("/snippet/create", snippetCreate)
 
 	log.Print("Starting server on localhost:4000")
-	err := http.ListenAndServe("localhost:4000", mux)
+	err := http.ListenAndServe("localhost:4000", nil)
 	log.Fatal(err)
 }
