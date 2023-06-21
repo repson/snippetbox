@@ -57,6 +57,7 @@ func (app *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 		return
 	}
+	app.infoLog.Printf("Snippet created with id %d", id)
 
 	http.Redirect(w, r, fmt.Sprintf("/snippet?id=%d", id), http.StatusSeeOther)
 }
