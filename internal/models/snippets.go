@@ -47,11 +47,10 @@ func (m *SnippetModel) Get(id int) (*Snippet, error) {
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
 			return nil, ErrNoRecord
+		} else {
+			return nil, err
 		}
-	} else {
-		return nil, err
 	}
-
 	return s, nil
 }
 
