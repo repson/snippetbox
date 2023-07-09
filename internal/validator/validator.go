@@ -18,7 +18,7 @@ func (v *Validator) AddFieldError(key, message string) {
 		v.FieldErrors = make(map[string]string)
 	}
 
-	if _, exists := v.FieldErrors[key]; exists {
+	if _, exists := v.FieldErrors[key]; !exists {
 		v.FieldErrors[key] = message
 	}
 }
