@@ -9,7 +9,7 @@ This application lets people paste and share snippets of text, abit like Pastebi
 ## Prerequisites
 
 * Go (v1.20)
-* MysQLDB
+* MySQLDB
 
 ## Run
 
