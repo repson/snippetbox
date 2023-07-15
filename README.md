@@ -17,39 +17,59 @@ This application lets people paste and share snippets of text, abit like Pastebi
 
 ## Features
 
-* REST API
-* HTTP status codes
-* Secure HTTP headers
+### General
+
+* Command-line flags
+* Dependency injection
+
+### UI
+
 * User interface using HTML template composition
 * Dynamic HTML templates
 * Caching templates
+* Processing forms
+* Automatic form parsing
+
+### HTTP
+
+* HTTP status codes
 * Serving static files
 * Directory listing disabled
 * Chaining HTTP handlers
+* Stateful HTTP
+* Session manager
+* HTTPS connection
+* HTTP/2 connections
+
+### API
+
+* REST API
+* Isolated application routes
+* Use of middleware
+* Composable middleware chains
+* Advanced routing
+
+### Logging & Errors
+
 * Centralized error handling
 * Leveled logging
-* Command-line flags
-* Dependency injection
-* Isolated application routes
+* Request logging
+* Panic recovery
+* Custom error handlers
+
+### Database
+
 * Database connection with MariaDB
 * SQL injection prevention
 * Use of transactions to execute multiple SQL statements in one atomic action
 * Database connection pools
 * Use of prepared statements
-* Use of middleware
+
+### Security
+
+* Secure HTTP headers
 * Security headers
-* Request logging
-* Panic recovery
-* Composable middleware chaings
-* Advanced routing
-* Custom error handlers
-* Processing forms
 * Validating form data
-* Automatic form parsing
-* Stateful HTTP
-* Session manager
-* HTTPS connection
-* HTTP/2 connections
 * TLS versions restricted
 * Cipher suites restricted
 * Connection timeouts
