@@ -73,4 +73,6 @@ This application lets people paste and share snippets of text, abit like Pastebi
 * TLS versions restricted
 * Cipher suites restricted
 * Connection timeouts
+* Sign up
 * Authentication
+* Logout
