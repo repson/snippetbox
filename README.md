@@ -17,6 +17,20 @@ This application lets people paste and share snippets of text, abit like Pastebi
 
 ## Features
 
+## API Routes
+
+| Method    | Pattern           | Handler           | Action                            |
+| --------- | ----------------- | ----------------- | --------------------------------- |
+| ANY       | /                 | home              | Display the home page             |
+| GET       | /snippet/view/:id | snippetView       | Display a specific snippet        |
+| GET       | /snippet/create   | snippetCreate     | Display the snippet creation form |
+| POST      | /snippet/create   | snippetCreatePost | Create a new snippet              |
+| GET       | /user/signup      | userSignup        | Display the sign up               |
+| POST      | /user/signup      | userSignupPost    | Create a new user                 |
+| GET       | /user/login       | userLogin         | Display the login form            |
+| POST      | /user/login       | userLoginPost     | User authentication               |
+| POST      | /user/logout      | userLogoutPost    | User logout                       |
+
 ### General
 
 * Command-line flags
