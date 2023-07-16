@@ -2,7 +2,7 @@
 
 ## Description
 
-This application lets people paste and share snippets of text, abit like Pastebin or Github's Gists.
+This application lets people paste and share snippets of text, a bit like Pastebin or Github's Gists.
 
 ![snippetbox](./ui/static/img/screenshot.png)
 
