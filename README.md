@@ -11,9 +11,71 @@ This application lets people paste and share snippets of text, abit like Pastebi
 * Go (v1.20)
 * MySQLDB
 
+## Deployment
+
+### Database
+
+Create a new snippetbox database:
+
+```
+-- Create a new UTF-8 `snippetbox` database.
+CREATE DATABASE snippetbox CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Switch to using the `snippetbox` database.
+USE snippetbox;
+
+```
+
+Create a new snippets table to hold the text snippets for our application:
+
+```
+-- Create a `snippets` table.
+CREATE TABLE snippets (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL,
+    created DATETIME NOT NULL,
+    expires DATETIME NOT NULL
+);
+
+-- Add an index on the created column.
+CREATE INDEX idx_snippets_created ON snippets(created);
+```
+
+Create a new user:
+
+```
+CREATE USER 'web'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON snippetbox.* TO 'web'@'localhost';
+-- Important: Make sure to swap 'pass' with a password of your own choosing.
+ALTER USER 'web'@'localhost' IDENTIFIED BY 'pass';
+```
+
+Create a sessions table in our MySQL database to hold the session data for our users:
+
+```
+USE snippetbox;
+
+CREATE TABLE sessions (
+    token CHAR(43) PRIMARY KEY,
+    data BLOB NOT NULL,
+    expiry TIMESTAMP(6) NOT NULL
+);
+
+CREATE INDEX sessions_expiry_idx ON sessions (expiry);
+```
+
+### Certificate
+
+For development purposes we can generate a self-signed certificate:
+
+```
+$ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
+```
+
 ## Run
 
-`$ go run cmd/web/*`
+```$ go run cmd/web/*```
 
 ## Features
 
@@ -30,6 +92,7 @@ This application lets people paste and share snippets of text, abit like Pastebi
 | GET       | /user/login       | userLogin         | Display the login form            |
 | POST      | /user/login       | userLoginPost     | User authentication               |
 | POST      | /user/logout      | userLogoutPost    | User logout                       |
+| GET       | /static/          | http.FileServer   | Serve a specific static file      |
 
 ### General
 
