@@ -138,7 +138,6 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 ### Database
 
 * Database connection with MariaDB
-* SQL injection prevention
 * Use of transactions to execute multiple SQL statements in one atomic action
 * Database connection pools
 * Use of prepared statements
@@ -151,6 +150,7 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 * TLS versions restricted
 * Cipher suites restricted
 * Connection timeouts
+* SQL injection prevention
 * Sign up
 * Authentication
 * Authorization
