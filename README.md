@@ -2,7 +2,7 @@
 
 ## Description
 
-This application lets people paste and share snippets of text, a bit like Pastebin or Github's Gists. I have built while reading the [Alex Edwards book "Let's Go](https://lets-go.alexedwards.net/).
+This application lets people paste and share snippets of text, a bit like Pastebin or Github's Gists. I have built while reading the [Alex Edwards book "Let's Go"](https://lets-go.alexedwards.net/).
 
 ![snippetbox](./ui/static/img/screenshot.png)
 
