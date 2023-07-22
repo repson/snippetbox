@@ -38,5 +38,5 @@ func (ts *testServer) get(t *testing.T, urlPath string) (int, http.Header, strin
 	}
 	bytes.TrimSpace(body)
 
-	return rs.StatusCode, rs.Header, body
+	return rs.StatusCode, rs.Header, string(body)
 }
