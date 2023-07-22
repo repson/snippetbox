@@ -77,6 +77,10 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 
 ```$ go run cmd/web/*```
 
+## Testing
+
+```$ go test ./cmd/web```
+
 ## Features
 
 ## API Routes
