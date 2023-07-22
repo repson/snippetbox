@@ -79,7 +79,7 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 
 ## Testing
 
-```$ go test ./cmd/web```
+```$ go test ./cmd/web``````
 
 ## Features
 
