@@ -113,10 +113,15 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 
 * Command-line flags
 * Dependency injection
+
+### Testing
+
 * Unit Testing & sub-tests
 * Table-driven tests
 * End-to-end testing
 * Mocking dependencies
+* Testing HTML forms
+* Integration testing
 
 ### UI
 
