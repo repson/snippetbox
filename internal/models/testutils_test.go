@@ -12,7 +12,7 @@ func newTestDB(t *testing.T) *sql.DB {
 		t.Fatal(err)
 	}
 
-	script, err := os.ReadFile("../../testdata/setup.sql")
+	script, err := os.ReadFile("./testdata/setup.sql")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -23,7 +23,7 @@ func newTestDB(t *testing.T) *sql.DB {
 	}
 
 	t.Cleanup(func() {
-		script, err := os.ReadFile("../../testdata/teardown.sql")
+		script, err := os.ReadFile("./testdata/teardown.sql")
 		if err != nil {
 			t.Fatal(err)
 		}
