@@ -75,11 +75,11 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 
 ## Run
 
-```$ go run cmd/web/*```
+```$ go run cmd/web/!(*_test).go```
 
 ## Testing
 
-```$ go test ./cmd/web``````
+```$ go test -v ./cmd/web``````
 
 ## Features
 
