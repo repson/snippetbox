@@ -105,6 +105,7 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 * Unit Testing & sub-tests
 * Table-driven tests
 * End-to-end testing
+* Mocking dependencies
 
 ### UI
 
