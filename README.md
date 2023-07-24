@@ -88,6 +88,10 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 
 ```$ go run cmd/web/!(*_test).go```
 
+## Debug Mode
+
+```$ go run ./cmd/web/ -debug```
+
 ## Testing
 
 ```$ go test -v ./cmd/web``````
