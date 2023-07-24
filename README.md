@@ -99,18 +99,22 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 
 ## API Routes
 
-| Method    | Pattern           | Handler           | Action                            |
-| --------- | ----------------- | ----------------- | --------------------------------- |
-| ANY       | /                 | home              | Display the home page             |
-| GET       | /snippet/view/:id | snippetView       | Display a specific snippet        |
-| GET       | /snippet/create   | snippetCreate     | Display the snippet creation form |
-| POST      | /snippet/create   | snippetCreatePost | Create a new snippet              |
-| GET       | /user/signup      | userSignup        | Display the sign up               |
-| POST      | /user/signup      | userSignupPost    | Create a new user                 |
-| GET       | /user/login       | userLogin         | Display the login form            |
-| POST      | /user/login       | userLoginPost     | User authentication               |
-| POST      | /user/logout      | userLogoutPost    | User logout                       |
-| GET       | /static/          | http.FileServer   | Serve a specific static file      |
+| Method | Pattern                   | Handler                   | Action                            |
+| ------ | ------------------------- | ------------------------- | --------------------------------- |
+| ANY    | /                         | home                      | Display the home page             |
+| GET    | /about                    | about                     | Display the about page            |
+| GET    | /snippet/view/:id         | snippetView               | Display a specific snippet        |
+| GET    | /snippet/create           | snippetCreate             | Display the snippet creation form |
+| POST   | /snippet/create           | snippetCreatePost         | Create a new snippet              |
+| GET    | /account/view             | accountView               | Display the user profile          |
+| GET    | /user/signup              | userSignup                | Display the sign up               |
+| POST   | /user/signup              | userSignupPost            | Create a new user                 |
+| GET    | /user/login               | userLogin                 | Display the login form            |
+| POST   | /user/login               | userLoginPost             | User authentication               |
+| POST   | /user/logout              | userLogoutPost            | User logout                       |
+| GET    | /account/password/update  | accountPasswordUpdatePost | Display the password update page  |
+| POST   | /account/password/update  | accountPasswordUpdatePost | Change the user password          |
+| GET    | /static/                  | http.FileServer           | Serve a specific static file      |
 
 ### General
 
