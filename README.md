@@ -125,6 +125,7 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 * Mocking dependencies
 * Testing HTML forms
 * Integration testing
+* Debug mode
 
 ### UI
 
@@ -134,6 +135,8 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 * Processing forms
 * Automatic form parsing
 * Contents changes depending on whether a user is authenticated or not
+* About page
+* Account page
 
 ### HTTP
 
@@ -183,3 +186,4 @@ $ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=lo
 * Authorization
 * Logout
 * CSRF protection
+* Change password feature
